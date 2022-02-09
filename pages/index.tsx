@@ -22,25 +22,25 @@ export default function Home() {
 
   return (
     <>
-      <div className="w-full bg-zinc-900 fixed">
-        <form method="GET" className='flex justify-center mx-auto mt-8'>
+      <body className="w-full h-full bg-zinc-900 bg-local">
+        <form method="GET" className='flex justify-center mx-auto'>
           <div className="relative text-gray-600 focus-within:text-gray-400">
             <span className="absolute inset-y-0 left-0 flex items-center pl-2">
               <button type="submit" className="p-1 focus:outline-none focus:shadow-outline">
-                <SearchIcon aria-hidden="true" className="w-6 h-6"/>
+                <SearchIcon aria-hidden="true" className="mt-32 w-6 h-6"/>
               </button>
             </span>
             <input 
             value={search}
             onChange={(e) => setSearch(e.target.value)} 
             type="search" 
-            className="py-2 text-sm text-white bg-gray-900 rounded-lg border-gray-800 pl-10 focus:outline-none focus:bg-white focus:text-gray-900" placeholder="Search..."/>
+            className="mt-32 py-2 text-sm text-white bg-gray-900 rounded-lg border-gray-800 pl-10 focus:outline-none focus:bg-white focus:text-gray-900" placeholder="Search..."/>
           </div>
         </form>
-        <div className="flex mx-auto items-center justify-center w-10/12 h-screen flex-wrap justify-between">
+        <div className="relative flex mx-auto items-center justify-center w-10/12 h-screen flex-wrap justify-between">
           {filteredChapters.map((chapter) => {
             return (
-              <div key={chapter.title} className="cursor-pointer mt-16 mx-12">
+              <div key={chapter.title} className="cursor-pointer mt-24 mx-6 xl:mx-12">
                 <Link href={chapter.href}>
                   <img className="object-contain" src={chapter.image}/>
                 </Link>
@@ -49,7 +49,7 @@ export default function Home() {
             )
           })}
         </div>
-      </div>
+      </body>
     </>
   )
 }
