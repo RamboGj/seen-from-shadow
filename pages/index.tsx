@@ -1,6 +1,5 @@
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
-import Pagination  from '../components/Pagination'
+import { useState } from 'react'
 import { SearchIcon } from '@heroicons/react/outline'
 
 const chapters = [
@@ -50,7 +49,6 @@ export default function Home() {
             )
           })}
         </div>
-        <Pagination/>
       </div>
     </>
   )
