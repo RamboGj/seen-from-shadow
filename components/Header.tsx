@@ -23,20 +23,20 @@ export default function Header() {
                                 Autor
                             </li>
                         </Link>
-                        <a href="/support">
+                        <Link href="/support">
                             <li 
                             className="flex items-center ml-12 p-4 hover:brightness-200 hover:cursor-pointer hover:text-yellow-700 hover:underline">
                                 <CurrencyDollarIcon aria-hidden="true" className="mr-2 w-6 h-6"/>
                                 Suporte
                             </li>
-                        </a>
-                        <a href="/login">
+                        </Link>
+                        <Link href="/login">
                             <li 
                             className="flex items-center ml-12 p-4 hover:brightness-200 hover:cursor-pointer hover:text-yellow-700 hover:underline">
                                 <LoginIcon aria-hidden="true" className="mr-2 w-6 h-6"/>
                                 Login
                             </li>
-                        </a>
+                        </Link>
                     </ul>
                 </nav>
         </header>
