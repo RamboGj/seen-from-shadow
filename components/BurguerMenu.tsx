@@ -1,5 +1,5 @@
-import { Menu, Transition } from '@headlessui/react';
 import { useState } from "react"
+import Link from 'next/link'
 
 export default function BurguerMenu() {
     const [dropOpen, setDropOpen] = useState<boolean>(false)
@@ -14,21 +14,21 @@ export default function BurguerMenu() {
             </div>
             <div>
                 {dropOpen && 
-                    <ul className="w-24 h-24">
+                    <ul className="w-24 mt-12 h-24">
                         <li className="mt-2 text-base">
-                            <a href="/">
+                            <Link href="/">
                                 Suporte
-                            </a>
+                            </Link>
                         </li>
                         <li className="mt-2 text-base">
-                            <a href="/">
+                            <Link href="/">
                                 Autor
-                            </a>
+                            </Link>
                         </li>
                         <li className="mt-2 text-base">
-                            <a href="/">
+                            <Link href="/">
                                 Login
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 }
