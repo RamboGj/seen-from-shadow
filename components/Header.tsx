@@ -1,13 +1,15 @@
 import { BookOpenIcon, InformationCircleIcon, CurrencyDollarIcon, LoginIcon } from '@heroicons/react/outline'
 import Link from 'next/link'
+import BurguerMenu from './BurguerMenu'
 
 export default function Header() {
     return (
-        <header className="fixed z-10 flex w-full items-center bg-black text-white font-bold text-lg py-4 px-16 justify-between">
+        <>
+            <header className="fixed z-10 flex w-full items-center bg-black text-white font-bold text-lg py-4 px-8 md:px-16 justify-between">
                 <Link href="/"> 
-                    <a className="hover:text-purple-900 hover:brightness-200" >Logo</a>
+                    <a className="hover:text-purple-900 hover:brightness-200 relative">Logo</a>
                 </Link>
-                <nav>
+                <nav className="hidden md:flex">
                     <ul className="flex">
                         <Link href="/chapters">
                             <li 
@@ -39,6 +41,8 @@ export default function Header() {
                         </Link>
                     </ul>
                 </nav>
-        </header>
+                <BurguerMenu />
+            </header>
+        </>
     )
 }
