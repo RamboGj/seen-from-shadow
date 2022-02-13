@@ -4,9 +4,10 @@ import Link from 'next/link'
 export default function BurguerMenu() {
     const [dropOpen, setDropOpen] = useState<boolean>(false)
 
+
     return (
         <>
-        <div className="flex justify-between align-center">
+        <div className="flex justify-between align-center md:hidden">
             <div onClick={() => setDropOpen(!dropOpen)} className="overflow-auto items-end space-y-2 md:hidden">
                 <span className="block w-8 h-0.5 bg-gray-600"></span>
                 <span className="block w-8 h-0.5 bg-gray-600"></span>
